@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Todo List Website</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;700;800&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="mouse-glow">
+  <div class="ripple-ring"></div>
+</div>
+<div class="wrap">
+
+  <header>
+    <div class="eyebrow">Task terminal, upgraded</div>
+    <h1>To‑Do List Website</h1>
+    <div class="sub">Same core logic as your to do list applcation — now presented in a clean web interface.</div>
+  </header>
+
+  <div class="jar">
+    <div class="jar-top">
+      <span class="jar-label" id="jarLabel">Let's get started</span>
+      <span class="jar-count" id="jarCount">0 / 0 done</span>
+    </div>
+    <div class="jar-track"><div class="jar-fill" id="jarFill"></div></div>
+  </div>
+
+  <form id="addForm">
+    <input type="text" id="taskInput" placeholder="Add a task..." autocomplete="off">
+    <button type="submit" class="add-btn">+ Add</button>
+  </form>
+  <div class="error-msg" id="errorMsg"></div>
+
+  <div class="filters">
+    <button data-filter="all" class="active">All</button>
+    <button data-filter="active">Active</button>
+    <button data-filter="done">Done</button>
+  </div>
+
+  <ul id="taskList"></ul>
+
+  <div class="empty" id="emptyState" style="display:none;">
+    <div class="big">🗒️</div>
+    <p id="emptyTitle">Wala pa'y list diri!</p>
+    <div class="sm" id="emptySub">Type something above and hit Add to start your list.</div>
+  </div>
+
+  <footer>Tasks live only in this tab — refresh and it's a fresh start</footer>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
